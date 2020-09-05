@@ -1,0 +1,69 @@
+
+
+
+
+<!-- begin snippet: js hide: false console: true babel: null -->
+
+<!-- language: lang-js -->
+
+    $(document).ready(function() {
+      $('.response img').click(function(e) {
+        var $a = $(this).addClass('clicked');
+        setTimeout(function() {
+          window.location.assign($a.attr('data-href'));
+        }, 1700);
+      });
+    });
+
+<!-- language: lang-css -->
+
+    body{
+      background-color:black;
+    }
+
+    a {
+      overflow: hidden;
+    }
+    .response {
+      position: absolute;
+    width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+          transition: 4s ease-out;
+    }
+    .clicked {
+      animation-delay: 2s;
+      animation: event 2s;
+      animation: response 4s;
+    }
+
+    @keyframes response {
+      0% {} 16% {
+        opacity: 1;
+        
+      }
+      32% {
+        opacity: 0;
+      }
+      40% {
+        opacity: 0;
+        transform: scale(1.15);
+       
+      }
+      100% {
+        
+        opacity: 0;
+      }
+    }
+
+<!-- language: lang-html -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <div class="response">
+        <img src="https://iphonesoft.fr/images/_082019/fond-ecran-dynamique-macos-wallpaper-club.jpg" data-href="http://google.com" />
+    </div>
+
+<!-- end snippet -->
+
